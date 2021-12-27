@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+    font-family:"Lucida Console", Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*STIL ZA SVE SLIKE*/
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*HERO SECTION*/
+#hero{
+    background-image: url(hero-image.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .4;
+    z-index: -1;
+}
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #C1A5A9;
+}
+
+.light-theme {
+    background-color: #C1A5A9;
+    color: #4A4E69;
+    --btnBg: #4A4E69;
+    --btnFontColor: #C1A5A9;
+}
+
+.dark-theme {
+    background-color: #4A4E69;
+    color: #C1A5A9;
+    --btnBg: #C1A5A9;
+    --btnFontColor: #4A4E69;
+  }
+
+/*BUTTON DARK AND LIGHT MODE*/
+.btn {
+    position: absolute;
+    top: 15px;
+    left: 1550px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+  }
+.btn:focus { outline-style: none; }
+
+/*POCETNA*/
+#pocetna .pocetna{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px;
+}
+#pocetna .pocetna-title{
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#pocetna .pocetna-top p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+#pocetna .pocetna-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+#pocetna .pocetna-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(background.png);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    color: #4A4E69;
+}
+#pocetna .pocetna-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4A4E69;
+    opacity: .2;
+    z-index: -1;
+}
+#pocetna .pocetna-bottom .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#pocetna .pocetna-bottom .icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#pocetna .pocetna-item h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: u
+    uppercase;
+}
+#pocetna .pocetna-item p{
+    text-align: justify;
+    font-size: 15;
+    line-height: 1.9rem;
+}
+
+/*KONTAKT*/
+#kontakt .kontakt{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+#kontakt .kontakt-title{
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#kontakt .kontakt-items{
+    width: 100%;
+}
+#kontakt .kontakt-item{
+    width: 95%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+}
+#kontakt .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#kontakt .kontakt-info h1 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+#kontakt .kontakt-info h2 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+/*NARUČI*/
+#naruci .naruci{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;}
+#naruci .naruci-title{
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.narucii {
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 25%;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #C1A5A9;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #4A4E69;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.narucii:hover {
+    background-color: #0000002c;
+}
+
+.narucii:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}

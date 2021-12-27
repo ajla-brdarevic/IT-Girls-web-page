@@ -1,0 +1,53 @@
+.light-theme {
+    background: #C1A5A9;
+    color: #4A4E69;
+    --btnBg: #4A4E69;
+    --btnFontColor: #C1A5A9;;
+  }
+  
+  .dark-theme {
+    background: #4A4E69;
+    color: #C1A5A9;
+    --btnBg: #C1A5A9;
+    --btnFontColor: #4A4E69;
+  }
+  
+  /*Button za dark i light mode */
+  .btn {
+      position: absolute;
+      top: 15px;
+      left: 1550px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: none;
+      color: var(--btnFontColor);
+      background-color: var(--btnBg);
+    }
+  .btn:focus { outline-style: none; }
+  
+  .vrati{
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #C1A5A9;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #4A4E69;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+  .main{
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
